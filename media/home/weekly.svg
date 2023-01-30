@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="weekly" transform="translate(-1464 -82)" opacity="0.32">
+    <g id="grid" transform="translate(1466.667 84.667)">
+      <rect id="Rectangle_93" data-name="Rectangle 93" width="10.667" height="10.667" rx="2" transform="translate(0 0)" fill="none" stroke="#f700ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <rect id="Rectangle_94" data-name="Rectangle 94" width="10.667" height="10.667" rx="2" transform="translate(16 0)" fill="none" stroke="#f700ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <rect id="Rectangle_95" data-name="Rectangle 95" width="10.667" height="10.667" rx="2" transform="translate(16 16)" fill="none" stroke="#f700ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <rect id="Rectangle_96" data-name="Rectangle 96" width="10.667" height="10.667" rx="2" transform="translate(0 16)" fill="none" stroke="#f700ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+    <rect id="Rectangle_97" data-name="Rectangle 97" width="32" height="32" transform="translate(1464 82)" fill="none"/>
+  </g>
+</svg>

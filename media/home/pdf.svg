@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="pdf" transform="translate(-1464 -90)" opacity="0.32">
+    <rect id="Rectangle_234" data-name="Rectangle 234" width="32" height="32" transform="translate(1464 90)" fill="none"/>
+    <g id="book" transform="translate(1469.333 92.667)">
+      <path id="Path_160" data-name="Path 160" d="M25.333,16H7.048A3.048,3.048,0,0,0,4,19.048H4A3.048,3.048,0,0,0,7.048,22.1H25.333" transform="translate(-4 3.809)" fill="none" stroke="#f700ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_161" data-name="Path 161" d="M25.333,22.809V3H8.571A4.571,4.571,0,0,0,4,7.571V25.857" transform="translate(-4 -3)" fill="none" stroke="#f700ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line id="Line_51" data-name="Line 51" y2="5.471" transform="translate(18.872 20.515)" fill="none" stroke="#f700ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

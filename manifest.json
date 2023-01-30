@@ -1,0 +1,29 @@
+{
+    "short_name": "Homeworks",
+    "description": "for Jamee Khooba!",
+    "icons": [
+      {
+        "src": "./media/logo/Logo.png",
+        "sizes": "56x56",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "./index.html",
+    "display": "standalone",
+    "orientation": "portrait",
+    "theme_color": "#fcfcfc",
+    "background_color": "#fcfcfc",
+    "screenshots": [
+      {
+        "src": "./media/Group 2.png",
+        "type": "image/png",
+        "sizes": "2340x1920"
+      },
+      {
+        "src": "./media/Group 2.png",
+        "type": "image/jpg",
+        "sizes": "2340x1920"
+      }
+    ]
+  }
+

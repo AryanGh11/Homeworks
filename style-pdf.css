@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Vazir-Medium";
+    outline: none;
+    font-size: 100%;
+}
+body {
+    background-color: #fcfcfc;
+    padding: 2rem 1rem 0;
+}
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 12px;
+}
+.current-date-day {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 .75rem 0 .75rem;
+}
+.current-day {
+    padding-left: .25rem;
+}
+.we-class {
+    display: flex;
+    height: 2rem;
+    align-items: center;
+    padding: 0 .75rem 0 .75rem;
+    background-color: #202020;
+    color: #fcfcfc;
+    border-radius: 12px;
+}
+.content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+.main-homework, .main-lessons {
+    display: flex;
+    flex-direction: column;
+}
+.main-lessons {
+    margin-top: 1rem;
+}
+.main-homework {
+    width: 100%;
+    height: 15rem;
+    padding: 0 2.5rem 0 0;
+    justify-content: center;
+    border: 4px solid rgba(247, 0, 255, 1);
+    border-radius: 24px;
+    margin-top: 1rem;
+    font-size: 18px;
+    align-items: flex-end;
+}
+.main-homework ul {
+    list-style: none;
+}
+.content-title {
+    margin-top: 1.5rem;
+    font-size: 14px;
+}
+.work {
+    background-color: rgba(247, 0, 255, 1);
+    width: fit-content;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    padding: 0 .5rem 0 .5rem;
+    border-radius: 8px;
+    font-family: "Vazir-Bold";
+    justify-content: right;
+    color: #fcfcfc;
+}
+.work:not(.work1) {
+    margin-top: .75rem;
+}
+.lessons-list {
+    display: flex;
+    flex-direction: row;
+    background-color: #F700FF;
+    height: 2rem;
+    align-items: center;
+    color: #fcfcfc;
+    padding: 0 .75rem;
+    border-radius: 12px;
+    font-size: 12px;
+}
+.menu-bar {
+    background-color: #fcfcfc;
+    display: flex;
+    height: 5.875rem;
+    justify-content: space-between;
+    padding: 0 4.5rem 1.5rem;
+    align-items: center;
+    width: 100%;
+    color: #F700FF;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+.pdf-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.home-btn p, .weekly-btn p, .pdf-btn p {
+    margin-top: .25rem;
+}
+.weekly-btn, .home-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: .32;
+}
+
+
