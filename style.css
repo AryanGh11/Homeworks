@@ -6,6 +6,10 @@
     outline: none;
     font-size: 100%;
     user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 body {
     background-color: #fcfcfc;
@@ -189,6 +193,107 @@ body {
 .lesson-title {
     margin-right: .25rem;
 }
-.homework3, .lesson3 {
+.homework5, .lesson5 {
     margin-right: 0;
+}
+.date-day-homework, .date-day-lesson {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.day-homework1, .day-homework2, .day-homework3, .day-homework4, .day-homework5, .day-lesson1, .day-lesson2, .day-lesson3, .day-lesson4, .day-lesson5 {
+    padding-right: .25rem;
+} 
+.saturday-homework2, .saturday-homework3, .sunday-homework2, .sunday-homework3, .monday-homework2, .monday-homework3, .tuesday-homework2, .tuesday-homework3, .wednesday-homework2, .wednesday-homework3 {
+    padding-top: .25rem;
+}
+.login-page {
+    background-color: #fcfcfc;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: +1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+.login-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6.375rem;
+    font-size: 21px;
+    font-weight: bolder;
+    text-align: center;
+}
+.login-header-logo {
+    width: 6rem;
+    margin-bottom: .5rem;
+}
+.inputs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.inputs input {
+    width: 100%;
+    height: 3rem;
+    border: 1px solid #202020;
+    border-radius: 8px;
+}
+.input-name, .input-password {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+.input-name p, .input-password p {
+    margin: 0 .25rem .5rem 0;
+    font-size: 12px;
+}
+.input-name {
+    margin-bottom: 1.5rem;
+}
+.input-name input::placeholder, .input-password input::placeholder {
+    font-size: 14px;
+    text-align: right;
+    opacity: 72%;
+}
+.input-name input::selection, .input-password input::selection {
+    color: #fcfcfc;
+    background-color: #F700FF;
+}
+.input-name input:focus, .input-password input:focus {
+    border: 2px solid #202020;
+}
+.input-name input:placeholder-shown, .input-password input:placeholder-shown {
+    padding-right: .75rem;
+    text-align: right;
+}
+.input-name input:not(:placeholder-shown), .input-password input:not(:placeholder-shown) {
+    padding-right: .75rem;
+    text-align: right;
+}
+.btns {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 3.5rem;
+}
+.btns button {
+    height: 3.5rem;
+}
+.login-btn {
+    background-color: #F700FF;
+    border: none;
+    border-radius: 8px;
+    color: #fcfcfc;
+    font-weight: bolder;
+}
+.signup-btn {
+    border: none;
+    color: #F700FF;
+    font-weight: bolder;
 }

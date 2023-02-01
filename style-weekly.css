@@ -5,6 +5,11 @@
     font-family: "Vazir-Medium";
     outline: none;
     font-size: 100%;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 body {
     background-color: #fcfcfc;
@@ -123,8 +128,5 @@ body {
 @keyframes homework {
     0% {
         width: 0;
-    }
-    100% {
-        width: 20.5rem;
     }
 }
