@@ -22,21 +22,21 @@ const pdfBtn = document.querySelector(".pdf-btn");
 document.querySelector(".current-date").innerHTML = currentYear + "/" + currentMonth + "/" + currentDay;
 document.querySelector(".current-day").innerHTML = dayList[currentDayOfWeek];
 
-if(currentDayOfWeek === 0) {
-    tomorrowLessons.innerHTML = monRemover;
-};
-if(currentDayOfWeek === 1) {
-    tomorrowLessons.innerHTML = tueRemover;
-};
-if(currentDayOfWeek === 2) {
-    tomorrowLessons.innerHTML = wedRemover;
-};
-if(currentDayOfWeek === 3) {
-    tomorrowLessons.innerHTML = satRemover;
-};
-if(currentDayOfWeek === 6) {
-    tomorrowLessons.innerHTML = sunRemover;
-};
+// if(currentDayOfWeek === 0) {
+//     tomorrowLessons.innerHTML = monRemover;
+// };
+// if(currentDayOfWeek === 1) {
+//     tomorrowLessons.innerHTML = tueRemover;
+// };
+// if(currentDayOfWeek === 2) {
+//     tomorrowLessons.innerHTML = wedRemover;
+// };
+// if(currentDayOfWeek === 3) {
+//     tomorrowLessons.innerHTML = satRemover;
+// };
+// if(currentDayOfWeek === 6) {
+//     tomorrowLessons.innerHTML = sunRemover;
+// };
 
 weeklyBtn.addEventListener("click", () => {
     window.location = "./weekly.html"
