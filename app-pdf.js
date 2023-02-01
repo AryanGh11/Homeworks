@@ -3,8 +3,8 @@ const pdfBtn = document.querySelector(".pdf-btn");
 const weeklyBtn = document.querySelector(".weekly-btn");
 const currentDate = new Date();
 const currentYear = currentDate.getFullYear() - 622;
-const currentMonth = currentDate.getMonth() + 11;
-const currentDay = currentDate.getDate() - 20;
+const currentMonth = currentDate.getMonth() + 10;
+const currentDay = currentDate.getDate() + 11;
 const currentDayOfWeek = currentDate.getDay();
 const dayList = ["یکشنبه", "دوشنبه", "سه شنبه", "چهارشنبه", "پنجشنبه", "جمعه", "شنبه"];
 

@@ -11,6 +11,21 @@ body {
     background-color: #fcfcfc;
     padding: 2rem 1rem 0;
 }
+.pre-loader {
+    width: 100%;
+    height: 100vh;
+    background-color: #fcfcfc;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+.pre-loader img {
+    width: 25%;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
 .header {
     display: flex;
     flex-direction: row;
@@ -36,11 +51,7 @@ body {
     border-radius: 12px;
 }
 .content {
-    display: flex;
     width: 100%;
-    flex-direction: column;
-    align-items: flex-end;
-    text-align: right;
 }
 .main-homework, .main-lessons {
     display: flex;
@@ -105,6 +116,7 @@ body {
     position: fixed;
     right: 0;
     bottom: 0;
+    user-select: none;
 }
 .home-btn {
     display: flex;
@@ -128,14 +140,18 @@ body {
 }
 .homeworks, .lessons {
     display: grid;
-    grid-template-columns: repeat(6, 0fr);
-    overflow: scroll;
+    grid-template-columns: repeat(5, 0fr);
+    overflow: auto;
+    text-align: right;
+}
+.homeworks::-webkit-scrollbar, .lessons::-webkit-scrollbar {
+    opacity: 0;
 }
 .homework, .lesson {
     width: 9rem;
     height: 12.5rem;
     background-color: #FBDDFC;
-    margin: 1rem 0 0 .75rem;
+    margin: 1rem .75rem 0 0;
     border-radius: 8px;
     padding: 1rem;
     font-size: 14px;
@@ -173,4 +189,6 @@ body {
 .lesson-title {
     margin-right: .25rem;
 }
-
+.homework3, .lesson3 {
+    margin-right: 0;
+}
