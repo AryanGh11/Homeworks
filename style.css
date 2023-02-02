@@ -50,9 +50,10 @@ body {
     height: 2rem;
     align-items: center;
     padding: 0 .75rem 0 .75rem;
-    background-color: #202020;
+    background-color: #F700FF;
     color: #fcfcfc;
     border-radius: 12px;
+    border: none;
 }
 .content {
     width: 100%;
@@ -296,4 +297,74 @@ body {
     border: none;
     color: #F700FF;
     font-weight: bolder;
+    background-color: #fcfcfc;
+}
+.profile {
+    display: flex;
+    flex-direction: row;
+    height: 2rem;
+    align-items: center;
+    justify-content: centerS;
+    padding: 0 .25rem 0 .75rem;
+    background-color: #202020;
+    color: #fcfcfc;
+    border-radius: 16px;
+    border: none;
+    display: none;
+}
+.username {
+    padding-right: .5rem;
+}
+.select-profile {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #fcfcfc;
+    border-radius: 50%;
+}
+.profile-popup {
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    background-color: #F700FF;
+    top: 4rem;
+    right: 1rem;
+    border-radius: 16px;
+    animation: profile-popup .2s ease-in alternate;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+}
+.set-avatar-btn {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    height: 2.5rem;
+    color: #F700FF;
+}
+.profile-popup label {
+    display: flex;
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+    background-color: #F700FF;
+    width: 100%;
+    height: 2.5rem;
+    color: #fcfcfc;
+}
+.cancel {
+    width: 7rem;
+    height: 2rem;
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+}
+/* #avatar-upload {
+    display: none;
+} */
+@keyframes profile-popup {
+    0% {
+        height: 0;
+    }
 }

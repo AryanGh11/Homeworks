@@ -9,34 +9,16 @@
     <link rel="manifest" href="./manifest.json">
     <title>Homeworks</title>
 </head>
-<body onload="checker()">
-    <div class="login-page">
-      <div class="login-header">
-        <img src="./media/logo/Logo - Outline.svg" alt="" class="login-header-logo">
-        <p class="login-header-text">به برنامه جمع رفقا خوش اومدی</p>
-      </div>
-      <div class="inputs">
-        <div class="input-name">
-          <p>نام و نام خانوادگی</p>
-          <input type="text" class="name" placeholder="اینجا بنویس">
-        </div>
-        <div class="input-password">
-          <p>رمز کلاس</p>
-          <input type="password" class="password" placeholder="اینجا بنویس">
-        </div>
-      </div>
-      <div class="btns">
-        <button class="login-btn">ورود</button>
-        <button class="signup-btn">ثبت نام</button>  
-      </div>
-    </div>
+<body onload="isLogin()">
     <header class="header">
         <div class="current-date-day">
             <p class="current-date"></p>
             <p class="current-day"></p>
         </div>
-        <div class="we-class">
-            <p class="we-class">12 ریاضی</p>
+        <button class="we-class" onclick="interLoginPage()">ورود به حساب</button>
+        <div class="profile">
+          <p class="username"></p>
+          <img class="select-profile"></img>
         </div>
     </header>
     <div class="content">
@@ -399,6 +381,7 @@
             <p>جزوه</p>
         </div>
     </div>
+    <button onclick="clearLogin()">fkckckckcck</button>
 </body>
 <script src="./app.js"></script>
 </html>

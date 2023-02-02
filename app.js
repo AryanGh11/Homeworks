@@ -32,6 +32,7 @@ const tuesdayHomework3 = document.querySelector(".tuesday-homework3");
 const wednesdayHomework1 = document.querySelector(".wednesday-homework1");
 const wednesdayHomework2 = document.querySelector(".wednesday-homework2");
 const wednesdayHomework3 = document.querySelector(".wednesday-homework3");
+const interIntoLogin = document.querySelector(".we-class");
 
 saturdayHomework1.innerHTML = "تکلیفی نداریم!";
 saturdayHomework2.innerHTML = "";
@@ -123,35 +124,136 @@ if(currentDayOfWeek === 6) {
     saturdayLesson.style.marginRight = "0";
     document.querySelector(".day-lesson2").innerHTML = "(فردا)";
 }
-const loginName = document.querySelector(".name");
-const loginPassword = document.querySelector(".password");
-const loginBtn = document.querySelector(".login-btn");
-loginBtn.addEventListener("click", () => {
-    const nameValue = loginName.value;
-    const passwordValue = loginPassword.value;
-    if(nameValue === "aryan" && passwordValue === "123") {
-        document.querySelector(".login-page").style.display = "none";
-        localStorage.setItem("remover", remover());
+function interLoginPage() {
+    const loginPage = document.createElement("div");
+    const body = document.querySelector("body");
+    body.appendChild(loginPage);
+    loginPage.classList.add("login-page");
+
+    const loginHeader = document.createElement("div");
+    loginPage.appendChild(loginHeader);
+    loginHeader.classList.add("login-header");
+
+    const loginHeaderLogo = document.createElement("img");
+    loginHeaderLogo.setAttribute("src", "./media/logo/Logo - Outline.svg");
+    loginHeader.appendChild(loginHeaderLogo);
+    loginHeaderLogo.classList.add("login-header-logo");
+
+    const loginHeaderText = document.createElement("p");
+    const loginHeaderTextContent = document.createTextNode("به جمع رفقا خوش اومدی");
+    loginHeaderText.appendChild(loginHeaderTextContent);
+    loginHeader.appendChild(loginHeaderText);
+    loginHeaderText.classList.add("login-header-text");
+
+    const inputs = document.createElement("div");
+    loginPage.appendChild(inputs);
+    inputs.classList.add("inputs");
+
+    const inputName = document.createElement("div");
+    inputs.appendChild(inputName);
+    inputName.classList.add("input-name");
+
+    const inputPassword = document.createElement("div");
+    inputs.appendChild(inputPassword);
+    inputPassword.classList.add("input-password");
+
+    const nameLabel = document.createElement("p");
+    const nameLabelText = document.createTextNode("نام و نام خانوادگی");
+    nameLabel.appendChild(nameLabelText);
+    inputName.appendChild(nameLabel);
+
+    const name = document.createElement("input");
+    inputName.appendChild(name);
+    name.classList.add("name");
+    name.placeholder = "اینجا بنویس";
+
+    const passwordLabel = document.createElement("p");
+    const passwordLabelText = document.createTextNode("رمز کلاس");
+    passwordLabel.appendChild(passwordLabelText);
+    inputPassword.appendChild(passwordLabel);
+
+    const password = document.createElement("input");
+    inputPassword.appendChild(password);
+    password.classList.add("password");
+    password.placeholder = "اینجا بنویس";
+
+    const btns = document.createElement("div");
+    loginPage.appendChild(btns);
+    btns.classList.add("btns");
+
+    const loginBtn = document.createElement("button");
+    const loginBtnText = document.createTextNode("ورود");
+    loginBtn.appendChild(loginBtnText);
+    btns.appendChild(loginBtn);
+    loginBtn.classList.add("login-btn");
+
+    const signupBtn = document.createElement("button");
+    const signupBtnText = document.createTextNode("ثبت نام");
+    signupBtn.appendChild(signupBtnText);
+    btns.appendChild(signupBtn);
+    signupBtn.classList.add("signup-btn");
+
+    loginBtn.addEventListener("click", () => {
+        const nameValue = name.value;
+        const passwordValue = password.value;
+        if(passwordValue === "123") {
+            localStorage.setItem("username", nameValue);
+            isLogin();
+            location.reload();
+        }
+    })
+}
+function isLogin() {
+    const username = localStorage.getItem("username");
+    document.querySelector(".username").innerHTML = username;
+    if(username.value != "") {
+        document.querySelector(".we-class").style.display = "none";
+        document.querySelector(".profile").style.display = "flex";
     }
-    localStorage.setItem("name", nameValue);
-    const checker = true;
-    checker();
-    getItem();
+}
+function clearLogin() {
+    localStorage.removeItem("username");
+    location.reload();
+}
+document.querySelector(".profile").addEventListener("click", () => {
+    const cancel = document.createElement("div");
+    document.querySelector("body").appendChild(cancel);
+    cancel.classList.add("cancel");
+    
+    const profilePopup = document.createElement("div");
+    const body = document.querySelector("body");
+    body.appendChild(profilePopup);
+    profilePopup.classList.add("profile-popup");
+
+    const avatarUploadLabel = document.createElement("label");
+    const avatarUploadLabelContent = document.createTextNode("انتخاب تصویر");
+    avatarUploadLabel.appendChild(avatarUploadLabelContent);
+    avatarUploadLabel.setAttribute("for", "avatar-upload");
+    profilePopup.appendChild(avatarUploadLabel);
+
+    const avatarUpload = document.createElement("input");
+    avatarUpload.type = "file";
+    profilePopup.appendChild(avatarUpload);
+    avatarUpload.setAttribute("accept", "image/png");
+    avatarUpload.setAttribute("id", "avatar-upload")
+
+    const setAvatarBtn = document.createElement("button");
+    const setAvatarBtnContent = document.createTextNode("تغییر");
+    setAvatarBtn.appendChild(setAvatarBtnContent);
+    setAvatarBtn.setAttribute("onclick", "my()");
+    profilePopup.appendChild(setAvatarBtn);
+    setAvatarBtn.classList.add("set-avatar-btn");
+
+    cancel.addEventListener("click", () => {
+        profilePopup.style.display = "none";
+        cancel.style.display = "none"
+    })
 })
-function getItem() {
-    const aryan = localStorage.getItem("name");
-    document.querySelector(".we-class").innerHTML = aryan;
+function my() {
+    const image = document.querySelector("#avatar-upload").value;
+    const avatarImage = document.createElement("img");
+    avatarImage.setAttribute("src", image);
+    document.querySelector(".profile").appendChild(avatarImage);
+    avatarImage.classList.add("select-profile");
 }
-function remover() {
-    document.querySelector(".login-page").style.display = "none";
-}
-function checker() {
-    localStorage.getItem("remover");
-}
-window.addEventListener("load", () => {
-    localStorage.getItem("remover");
-})
-
-
-
 
