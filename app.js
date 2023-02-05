@@ -7,6 +7,7 @@ const dayList = ["یکشنبه", "دوشنبه", "سه شنبه", "چهارشن�
 const homeBtn = document.querySelector(".home-btn");
 const weeklyBtn = document.querySelector(".weekly-btn");
 const pdfBtn = document.querySelector(".pdf-btn");
+const profileBtn = document.querySelector(".profile-btn");
 const saturdayHomework = document.querySelector(".homework1");
 const sundayHomework = document.querySelector(".homework2");
 const mondayHomework = document.querySelector(".homework3");
@@ -32,7 +33,25 @@ const tuesdayHomework3 = document.querySelector(".tuesday-homework3");
 const wednesdayHomework1 = document.querySelector(".wednesday-homework1");
 const wednesdayHomework2 = document.querySelector(".wednesday-homework2");
 const wednesdayHomework3 = document.querySelector(".wednesday-homework3");
-const interIntoLogin = document.querySelector(".we-class");
+const interIntoLogin = document.querySelector(".login-system");
+const date = document.querySelector(".date");
+
+date.addEventListener("click", () => {
+    const todayDate = document.createElement("div");
+    document.querySelector("body").appendChild(todayDate);
+    todayDate.classList.add("today-date");
+
+    const todayDateText = document.createElement("p");
+    todayDate.append(todayDateText);
+    todayDateText.classList.add("current-date")
+
+    const todayDateDay = document.createElement("p");
+    todayDate.append(todayDateDay);
+    todayDateDay.classList.add("current-day");
+
+    document.querySelector(".current-date").innerHTML = currentYear + "/" + currentMonth + "/" + currentDay;
+    document.querySelector(".current-day").innerHTML = dayList[currentDayOfWeek];
+})
 
 saturdayHomework1.innerHTML = "تکلیفی نداریم!";
 saturdayHomework2.innerHTML = "";
@@ -54,15 +73,14 @@ wednesdayHomework1.innerHTML = "تکالیف";
 wednesdayHomework2.innerHTML = "تکالیف";
 wednesdayHomework3.innerHTML = "تکالیف";
 
-document.querySelector(".current-date").innerHTML = currentYear + "/" + currentMonth + "/" + currentDay;
-document.querySelector(".current-day").innerHTML = dayList[currentDayOfWeek];
-
 weeklyBtn.addEventListener("click", () => {
     window.location = "./weekly.html"
 })
 pdfBtn.addEventListener("click", () => {
     window.location = "./pdf.html"
 })
+
+
 
 if(currentDayOfWeek === 0) {
     mondayHomework.style.order = "-1";
@@ -174,6 +192,7 @@ function interLoginPage() {
 
     const password = document.createElement("input");
     inputPassword.appendChild(password);
+    password.type = "password";
     password.classList.add("password");
     password.placeholder = "اینجا بنویس";
 
@@ -203,57 +222,28 @@ function interLoginPage() {
         }
     })
 }
+
+const loadFile = function(event) {
+    const image = document.querySelector(".select-profile");
+    image.src = URL.createObjectURL(event.target.files[0]);
+    console.log(image)
+    localStorage.setItem("avatar", image.src);
+}
 function isLogin() {
     const username = localStorage.getItem("username");
     document.querySelector(".username").innerHTML = username;
     if(username.value != "") {
-        document.querySelector(".we-class").style.display = "none";
+        document.querySelector(".login-system").style.display = "none";
         document.querySelector(".profile").style.display = "flex";
     }
+    const avatar = localStorage.getItem("avatar");
+    const image = document.querySelector(".select-profile");    
+    image.src = avatar;
 }
 function clearLogin() {
     localStorage.removeItem("username");
     location.reload();
 }
-document.querySelector(".profile").addEventListener("click", () => {
-    const cancel = document.createElement("div");
-    document.querySelector("body").appendChild(cancel);
-    cancel.classList.add("cancel");
-    
-    const profilePopup = document.createElement("div");
-    const body = document.querySelector("body");
-    body.appendChild(profilePopup);
-    profilePopup.classList.add("profile-popup");
 
-    const avatarUploadLabel = document.createElement("label");
-    const avatarUploadLabelContent = document.createTextNode("انتخاب تصویر");
-    avatarUploadLabel.appendChild(avatarUploadLabelContent);
-    avatarUploadLabel.setAttribute("for", "avatar-upload");
-    profilePopup.appendChild(avatarUploadLabel);
 
-    const avatarUpload = document.createElement("input");
-    avatarUpload.type = "file";
-    profilePopup.appendChild(avatarUpload);
-    avatarUpload.setAttribute("accept", "image/png");
-    avatarUpload.setAttribute("id", "avatar-upload")
-
-    const setAvatarBtn = document.createElement("button");
-    const setAvatarBtnContent = document.createTextNode("تغییر");
-    setAvatarBtn.appendChild(setAvatarBtnContent);
-    setAvatarBtn.setAttribute("onclick", "my()");
-    profilePopup.appendChild(setAvatarBtn);
-    setAvatarBtn.classList.add("set-avatar-btn");
-
-    cancel.addEventListener("click", () => {
-        profilePopup.style.display = "none";
-        cancel.style.display = "none"
-    })
-})
-function my() {
-    const image = document.querySelector("#avatar-upload").value;
-    const avatarImage = document.createElement("img");
-    avatarImage.setAttribute("src", image);
-    document.querySelector(".profile").appendChild(avatarImage);
-    avatarImage.classList.add("select-profile");
-}
 

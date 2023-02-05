@@ -11,11 +11,27 @@
 </head>
 <body onload="isLogin()">
     <header class="header">
-        <div class="current-date-day">
+        <!-- <div class="current-date-day">
             <p class="current-date"></p>
             <p class="current-day"></p>
-        </div>
-        <button class="we-class" onclick="interLoginPage()">ورود به حساب</button>
+        </div> -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" class="date">
+          <g id="date" transform="translate(-1464 -78)">
+            <rect id="Rectangle_232" data-name="Rectangle 232" width="40" height="40" transform="translate(1464 78)" fill="none"/>
+            <g id="calendar-2" transform="translate(1471.451 84.667)">
+              <path id="Path_179" data-name="Path 179" d="M4,10H29.1V24.118a3.137,3.137,0,0,1-3.137,3.137H7.137A3.137,3.137,0,0,1,4,24.118Z" transform="translate(-4 -0.588)" fill="none" stroke="#202020" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+              <path id="Path_180" data-name="Path 180" d="M6.789,5H4v7.843H29.1V5H26.309M15.155,5h2.789" transform="translate(-4 -3.431)" fill="none" stroke="#202020" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+              <line id="Line_57" data-name="Line 57" y2="3.333" transform="translate(6.716)" fill="none" stroke="#202020" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+              <line id="Line_58" data-name="Line 58" y2="3.333" transform="translate(18.382)" fill="none" stroke="#202020" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+              <path id="Path_181" data-name="Path 181" d="M7,13h.016" transform="translate(-2.294 1.118)" fill="none" stroke="#202020" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+              <path id="Path_182" data-name="Path 182" d="M7,16h.016" transform="translate(-2.294 2.824)" fill="none" stroke="#202020" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+              <path id="Path_183" data-name="Path 183" d="M10,13h.016" transform="translate(-0.588 1.118)" fill="none" stroke="#202020" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+              <path id="Path_184" data-name="Path 184" d="M10,16h.016" transform="translate(-0.588 2.824)" fill="none" stroke="#202020" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+              <path id="Path_185" data-name="Path 185" d="M13,13h.016" transform="translate(1.118 1.118)" fill="none" stroke="#202020" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+            </g>
+          </g>
+        </svg> 
+        <button class="login-system" onclick="interLoginPage()">ورود به حساب</button>
         <div class="profile">
           <p class="username"></p>
           <img class="select-profile"></img>
@@ -380,8 +396,24 @@
             </svg>                          
             <p>جزوه</p>
         </div>
+        <div class="profile-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+            <g id="profile-btn" transform="translate(-1464 -76)">
+              <rect id="Rectangle_247" data-name="Rectangle 247" width="32" height="32" transform="translate(1464 76)" fill="none"/>
+              <g id="user" transform="translate(1470 78.667)">
+                <circle id="Ellipse_77" data-name="Ellipse 77" cx="5.333" cy="5.333" r="5.333" transform="translate(4.667 0)" fill="none" stroke="#f700ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                <path id="Path_859" data-name="Path 859" d="M19.333,13H12.667A6.667,6.667,0,0,0,6,19.667a5,5,0,0,0,5,5H21a5,5,0,0,0,5-5A6.667,6.667,0,0,0,19.333,13Z" transform="translate(-6 2)" fill="none" stroke="#f700ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+              </g>
+            </g>
+          </svg>                                  
+          <p>پروفایل</p>
+      </div>
     </div>
-    <button onclick="clearLogin()">fkckckckcck</button>
-</body>
+    <button onclick="clearLogin()">حذفش کن</button>
+    <input type="file" accept="image/*" id="file" hidden onchange="loadFile(event)">
+    <label for="file">آپلود تصویر</label>
+    <input type="file" accept="image/*" id="camera" capture="camera" onchange="loadFile(event)" hidden>
+    <label for="camera">عکس بگیر</label>
+  </body>
 <script src="./app.js"></script>
 </html>

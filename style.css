@@ -45,15 +45,16 @@ body {
 .current-day {
     padding-left: .25rem;
 }
-.we-class {
+.login-system {
     display: flex;
-    height: 2rem;
+    height: 2.5rem;
     align-items: center;
     padding: 0 .75rem 0 .75rem;
     background-color: #F700FF;
     color: #fcfcfc;
-    border-radius: 12px;
+    border-radius: 124px;
     border: none;
+    font-size: 14px;
 }
 .content {
     width: 100%;
@@ -114,7 +115,7 @@ body {
     display: flex;
     height: 5.875rem;
     justify-content: space-between;
-    padding: 0 4.5rem 1.5rem;
+    padding: 0 3.1875rem 1.5rem 3.5rem;
     align-items: center;
     width: 100%;
     color: #F700FF;
@@ -131,13 +132,7 @@ body {
 .home-btn p, .weekly-btn p, .pdf-btn p {
     margin-top: .25rem;
 }
-.weekly-btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    opacity: .32;
-}
-.pdf-btn {
+.pdf-btn, .weekly-btn, .profile-btn {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -302,69 +297,46 @@ body {
 .profile {
     display: flex;
     flex-direction: row;
-    height: 2rem;
+    height: 2.5rem;
     align-items: center;
     justify-content: centerS;
     padding: 0 .25rem 0 .75rem;
     background-color: #202020;
     color: #fcfcfc;
-    border-radius: 16px;
+    border-radius: 24px;
     border: none;
     display: none;
 }
 .username {
     padding-right: .5rem;
+    font-size: 14px;
 }
 .select-profile {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 2rem;
+    height: 2rem;
     background-color: #fcfcfc;
     border-radius: 50%;
 }
-.profile-popup {
-    position: absolute;
-    width: 10rem;
-    height: 10rem;
+.date {
+    width: fit-content;
+    height: fit-content;
+}
+.today-date {
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -30%);
     background-color: #F700FF;
-    top: 4rem;
-    right: 1rem;
-    border-radius: 16px;
-    animation: profile-popup .2s ease-in alternate;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 1rem;
-    align-items: center;
-}
-.set-avatar-btn {
-    width: 100%;
-    border: none;
-    border-radius: 8px;
-    height: 2.5rem;
-    color: #F700FF;
-}
-.profile-popup label {
-    display: flex;
-    flex: 2;
+    width: calc(100% - 2rem);
+    height: 30%;
     justify-content: center;
     align-items: center;
-    background-color: #F700FF;
-    width: 100%;
-    height: 2.5rem;
-    color: #fcfcfc;
+    animation: today-date .2s;
 }
-.cancel {
-    width: 7rem;
-    height: 2rem;
-    position: absolute;
-    top: 2rem;
-    right: 1rem;
-}
-/* #avatar-upload {
-    display: none;
-} */
-@keyframes profile-popup {
+@keyframes today-date {
     0% {
+        width: 0;
         height: 0;
     }
 }

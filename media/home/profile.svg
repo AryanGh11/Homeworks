@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="profile-btn" transform="translate(-1464 -76)">
+    <rect id="Rectangle_247" data-name="Rectangle 247" width="32" height="32" transform="translate(1464 76)" fill="none"/>
+    <g id="user" transform="translate(1470 78.667)">
+      <circle id="Ellipse_77" data-name="Ellipse 77" cx="5.333" cy="5.333" r="5.333" transform="translate(4.667 0)" fill="none" stroke="#f700ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_859" data-name="Path 859" d="M19.333,13H12.667A6.667,6.667,0,0,0,6,19.667a5,5,0,0,0,5,5H21a5,5,0,0,0,5-5A6.667,6.667,0,0,0,19.333,13Z" transform="translate(-6 2)" fill="none" stroke="#f700ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>
